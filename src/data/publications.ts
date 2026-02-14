@@ -5,6 +5,7 @@ export interface Publication {
   venue: string;
   year: number;
   image?: string;
+  video?: string;
   links: { label: string; url: string }[];
   award?: string;
   category: "conference" | "workshop" | "patent";
@@ -97,6 +98,7 @@ export const publications: Publication[] = [
     authors: "peiran wang*, qiyu li*, longxuan yu, ziyao wang, ang li, haojian jin",
     venue: "ccs'24",
     year: 2024,
+    video: "https://www.haojianj.in/resource/videos/moderator-demo.mp4",
     links: [
       { label: "paper", url: "https://www.haojianj.in/resource/pdf/contentmoderator.pdf" },
       { label: "code", url: "https://github.com/AISmithLab/Moderator" },
@@ -230,6 +232,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, zhijian yang, swarun kumar, jason hong",
     venue: "imwut'17 / ubicomp'18",
     year: 2017,
+    video: "https://www.haojianj.in/resource/videos/rfwear_thumb.mp4",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/wearable-everyday-body.pdf" }],
     award: "ubicomp & iswc 2018 best demo honorable mention",
     category: "conference",
@@ -240,6 +243,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, yale song, koji yatani",
     venue: "acmmm'17",
     year: 2017,
+    video: "https://www.haojianj.in/resource/videos/elasticplay_thumb.mp4",
     links: [{ label: "paper", url: "https://arxiv.org/abs/1708.06858" }],
     award: "oral presentation - top 7%",
     category: "conference",
@@ -250,6 +254,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, cheng xu, kent lyons",
     venue: "uist'15",
     year: 2015,
+    video: "https://www.haojianj.in/resource/videos/corona_arrow_white.mp4",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/corona_uist_paper.pdf" }],
     category: "conference",
   },
@@ -259,6 +264,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, christian holz, kasper hornbæk",
     venue: "uist'15",
     year: 2015,
+    video: "https://www.haojianj.in/resource/videos/tracko_thumb.mp4",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/tracko-uist15.pdf" }],
     category: "conference",
   },
@@ -268,6 +274,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, tetsuya sakai, koji yatani",
     venue: "mobilehci'14",
     year: 2014,
+    video: "https://www.haojianj.in/resource/videos/reviewcollage_thumb.mp4",
     links: [{ label: "paper", url: "http://iis-lab.org/paper/MobileHCI2014_ReviewCollage.pdf" }],
     award: "best paper honorable mention award, top 5%",
     category: "conference",
