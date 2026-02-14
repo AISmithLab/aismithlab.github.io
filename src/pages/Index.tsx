@@ -34,18 +34,15 @@ const Index = () => {
       <main className="relative z-10 flex min-h-screen flex-col justify-center px-8 sm:px-16 lg:px-24">
         <div className="max-w-xl">
           <h1 className="font-mono-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
-            jo
+            ai smith lab
           </h1>
 
           <div className="mt-6 space-y-1">
             <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              a private AI that knows you.
+              toolsmiths for the age of agentic ai.
             </p>
             <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              gets stuff done while you sleep.
-            </p>
-            <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              runs on your new zero-maintenance AI server.
+              human × ai systems × privacy × security × trust.
             </p>
           </div>
 
@@ -80,7 +77,7 @@ const Index = () => {
                 e.currentTarget.style.boxShadow = "var(--glow-cta)";
               }}
             >
-              join the waitlist ›
+              join us ›
             </a>
           </div>
         </div>
