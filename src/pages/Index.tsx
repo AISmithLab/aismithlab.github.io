@@ -43,10 +43,16 @@ const Index = () => {
           {/* Affiliations */}
           <div className="mt-4 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground/50 sm:text-sm">
             <span>
-              <a href="https://ucsd.edu/">ucsd</a>
+              <a href="https://ucsd.edu/" target="_blank">
+                ucsd
+              </a>
             </span>
             <span>·</span>
-            <span>hdsi</span>
+            <span>
+              <a href="https://datascience.ucsd.edu/" target="_blank">
+                hdsi
+              </a>
+            </span>
           </div>
 
           {/* CTA Button */}
