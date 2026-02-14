@@ -202,6 +202,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/software_defined_cooking_thumb.jpg",
     links: [
       { label: "paper", url: "https://www.haojianj.in/resource/pdf/mobicom19-software-defined-cooking-paper.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/mobicom19-software-defined-cooking-slides.pdf" },
     ],
     award: "featured in acm getmobile research highlight & cacm research highlights",
     category: "conference",
@@ -213,7 +214,10 @@ export const publications: Publication[] = [
     venue: "imwut'18",
     year: 2018,
     image: "https://www.haojianj.in/resource/image/phone_farm_thumb.png",
-    links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/mobipurpose_ubicomp.pdf" }],
+    links: [
+      { label: "paper", url: "https://www.haojianj.in/resource/pdf/mobipurpose_ubicomp.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/mobipurpose-slides-final.pdf" },
+    ],
     category: "conference",
   },
   {
@@ -223,7 +227,11 @@ export const publications: Publication[] = [
     venue: "mobisys'18",
     year: 2018,
     image: "https://www.haojianj.in/resource/image/wish_bridge.png",
-    links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/wireless-shape-aware.pdf" }],
+    links: [
+      { label: "paper", url: "https://www.haojianj.in/resource/pdf/wireless-shape-aware.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/wish_mobisys_presentation.pdf" },
+      { label: "video", url: "https://www.youtube.com/watch?v=4FOLxXvjTvc" },
+    ],
     category: "conference",
   },
   {
@@ -233,7 +241,11 @@ export const publications: Publication[] = [
     venue: "imwut'17 / ubicomp'18",
     year: 2017,
     video: "https://www.haojianj.in/resource/videos/rfwear_thumb.mp4",
-    links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/wearable-everyday-body.pdf" }],
+    links: [
+      { label: "paper", url: "https://www.haojianj.in/resource/pdf/wearable-everyday-body.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/rfwear_presentation.pdf" },
+      { label: "video", url: "https://youtu.be/1Z1DbU8kDak" },
+    ],
     award: "ubicomp & iswc 2018 best demo honorable mention",
     category: "conference",
   },
@@ -244,7 +256,11 @@ export const publications: Publication[] = [
     venue: "acmmm'17",
     year: 2017,
     video: "https://www.haojianj.in/resource/videos/elasticplay_thumb.mp4",
-    links: [{ label: "paper", url: "https://arxiv.org/abs/1708.06858" }],
+    links: [
+      { label: "paper", url: "https://arxiv.org/abs/1708.06858" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/elasticplay_acmmm_presentation.pdf" },
+      { label: "video", url: "https://www.youtube.com/watch?v=mQGiBhesAlM" },
+    ],
     award: "oral presentation - top 7%",
     category: "conference",
   },
@@ -255,7 +271,10 @@ export const publications: Publication[] = [
     venue: "uist'15",
     year: 2015,
     video: "https://www.haojianj.in/resource/videos/corona_arrow_white.mp4",
-    links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/corona_uist_paper.pdf" }],
+    links: [
+      { label: "paper", url: "https://www.haojianj.in/resource/pdf/corona_uist_paper.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/corona_uist_presentation.pdf" },
+    ],
     category: "conference",
   },
   {
@@ -264,8 +283,12 @@ export const publications: Publication[] = [
     authors: "haojian jin, christian holz, kasper hornbæk",
     venue: "uist'15",
     year: 2015,
-    video: "https://www.haojianj.in/resource/videos/tracko_thumb.mp4",
-    links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/tracko-uist15.pdf" }],
+    image: "https://www.haojianj.in/resource/image/tracko_thumb.png",
+    links: [
+      { label: "paper", url: "https://www.haojianj.in/resource/pdf/tracko-uist15.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/tracko-presentation.pdf" },
+      { label: "video", url: "https://www.youtube.com/watch?v=GIZtf4uGZOM" },
+    ],
     category: "conference",
   },
   {
@@ -274,8 +297,12 @@ export const publications: Publication[] = [
     authors: "haojian jin, tetsuya sakai, koji yatani",
     venue: "mobilehci'14",
     year: 2014,
-    video: "https://www.haojianj.in/resource/videos/reviewcollage_thumb.mp4",
-    links: [{ label: "paper", url: "http://iis-lab.org/paper/MobileHCI2014_ReviewCollage.pdf" }],
+    image: "https://www.haojianj.in/resource/image/reviewcollage.png",
+    links: [
+      { label: "paper", url: "http://iis-lab.org/paper/MobileHCI2014_ReviewCollage.pdf" },
+      { label: "slides", url: "https://www.haojianj.in/resource/pdf/reviewcollage_presentation.pdf" },
+      { label: "video", url: "http://youtu.be/QDPg2E0RYbg" },
+    ],
     award: "best paper honorable mention award, top 5%",
     category: "conference",
   },
