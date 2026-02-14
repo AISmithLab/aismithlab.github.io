@@ -32,10 +32,10 @@ const Index = () => {
               toolsmiths for the age of agentic ai.
             </p>
             <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              human × ai systems × privacy
+              human × ai systems ×
             </p>
             <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              security × trust.
+              privacy × security × trust.
             </p>
           </div>
 
