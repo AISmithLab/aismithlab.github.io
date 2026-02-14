@@ -46,7 +46,7 @@ const Index = () => {
             <span>hdsi</span>
           </div>
           {/* CTA Button */}
-          {/* <div className="mt-8">
+          <div className="mt-8">
             <a
               href="#"
               className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105"
@@ -65,7 +65,7 @@ const Index = () => {
             >
               join us ›
             </a>
-          </div> 
+          </div>
         </div>
       </main>
     </div>
