@@ -42,7 +42,9 @@ const Index = () => {
 
           {/* Affiliations */}
           <div className="mt-4 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground/50 sm:text-sm">
-            <span>ucsd</span>
+            <span>
+              <a href="https://ucsd.edu/">ucsd</a>
+            </span>
             <span>·</span>
             <span>hdsi</span>
           </div>
