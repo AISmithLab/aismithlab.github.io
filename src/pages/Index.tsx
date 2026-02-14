@@ -46,7 +46,6 @@ const Index = () => {
             <span>hdsi</span>
           </div>
           {/* CTA Button */}
-          /*{" "}
           {/* <div className="mt-8">
             <a
               href="#"
@@ -66,8 +65,7 @@ const Index = () => {
             >
               join us ›
             </a>
-          </div> */}{" "}
-          */
+          </div> 
         </div>
       </main>
     </div>
