@@ -58,7 +58,19 @@ const Research = () => {
               key={pub.id}
               className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
             >
-              {pub.image && (
+              {pub.video ? (
+                <div className="aspect-video w-full overflow-hidden bg-muted">
+                  <video
+                    src={pub.video}
+                    autoPlay
+                    loop
+                    muted
+                    playsInline
+                    preload="metadata"
+                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  />
+                </div>
+              ) : pub.image ? (
                 <div className="aspect-video w-full overflow-hidden bg-muted">
                   <img
                     src={pub.image}
@@ -67,7 +79,7 @@ const Research = () => {
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
                 </div>
-              )}
+              ) : null}
               <div className="flex flex-1 flex-col p-4">
                 <span className="mb-2 inline-block self-start rounded-full bg-primary/10 px-2 py-0.5 font-mono-display text-[10px] tracking-wide text-primary">
                   {pub.venue}
