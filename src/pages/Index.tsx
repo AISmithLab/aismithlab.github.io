@@ -1,12 +1,11 @@
-import { useRef, useState } from "react";
-import { Apple, Send, MessageCircle } from "lucide-react";
+import { useRef } from "react";
 
 const Index = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
 
   return (
     <div className="relative min-h-screen w-full overflow-hidden bg-background">
-      {/* Video Background - will show gradient fallback until video is uploaded */}
+      {/* Video Background */}
       <div className="absolute inset-0 z-0">
         <video
           ref={videoRef}
@@ -33,21 +32,18 @@ const Index = () => {
               toolsmiths for the age of agentic ai.
             </p>
             <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              human × ai systems × privacy × security × trust.
+              human × ai systems × privacy
+            </p>
+            <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
+              security × trust.
             </p>
           </div>
 
-          {/* Social Icons */}
-          <div className="mt-6 flex items-center gap-4 text-muted-foreground">
-            <a href="#" className="transition-colors hover:text-foreground">
-              <Apple className="h-5 w-5" />
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
-              <Send className="h-5 w-5" />
-            </a>
-            <a href="#" className="transition-colors hover:text-foreground">
-              <MessageCircle className="h-5 w-5" />
-            </a>
+          {/* Affiliations */}
+          <div className="mt-6 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground sm:text-sm">
+            <span>ucsd</span>
+            <span className="text-muted-foreground/50">·</span>
+            <span>hdsi</span>
           </div>
 
           {/* CTA Button */}
