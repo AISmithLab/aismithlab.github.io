@@ -17,16 +17,8 @@ const Index = () => {
           className="absolute inset-0 h-full w-full object-cover"
           src="/videos/background.mp4"
         />
-        {/* Gradient fallback / overlay */}
-        <div
-          className="absolute inset-0"
-          style={{
-            background:
-              "linear-gradient(135deg, hsl(200, 50%, 8%) 0%, hsl(210, 60%, 10%) 30%, hsl(195, 40%, 12%) 60%, hsl(30, 40%, 15%) 100%)",
-          }}
-        />
         {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-background/30" />
+        <div className="absolute inset-0 bg-background/40" />
       </div>
 
       {/* Content */}
