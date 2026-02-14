@@ -41,62 +41,58 @@ const Research = () => {
   return (
     <div className="light-research min-h-screen bg-background text-foreground">
       {/* header */}
-      <header className="sticky top-0 z-20 border-b border-border/40 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto max-w-6xl px-6 py-4 space-y-3">
-          <div className="flex items-center gap-4">
-            <Link
-              to="/"
-              className="flex items-center gap-1.5 font-mono-display text-xs text-muted-foreground transition-colors hover:text-foreground"
-            >
-              <ArrowLeft className="h-3.5 w-3.5" />
-              home
-            </Link>
-            <h1 className="font-mono-display text-sm font-bold tracking-tight">
-              research
-            </h1>
-          </div>
-          <div className="flex w-full items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2">
-            <Search className="h-4 w-4 text-muted-foreground" />
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              placeholder="search projects..."
-              className="w-full bg-transparent font-mono-display text-xs text-foreground placeholder:text-muted-foreground/60 focus:outline-none"
-            />
-          </div>
-          <div className="flex flex-wrap gap-2">
+      <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
+        <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-between">
+          <Link
+            to="/"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            Home
+          </Link>
+          <nav className="flex items-center gap-6">
             {ALL_TAGS.map((tag) => (
               <button
                 key={tag}
                 onClick={() => toggleTag(tag)}
-                className={`rounded-full border px-3 py-1 font-mono-display text-[11px] transition-colors ${
+                className={`text-sm capitalize transition-colors ${
                   activeTags.has(tag)
-                    ? "border-primary bg-primary/15 text-primary"
-                    : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                    ? "text-foreground font-medium underline underline-offset-4 decoration-2"
+                    : "text-muted-foreground hover:text-foreground"
                 }`}
               >
                 {tag}
               </button>
             ))}
-          </div>
+          </nav>
         </div>
       </header>
 
-      {/* gallery */}
-      <main className="mx-auto max-w-6xl px-6 py-10">
-        <p className="mb-8 font-mono-display text-xs text-muted-foreground">
-          {filtered.length} project{filtered.length !== 1 ? "s" : ""}
-        </p>
+      {/* search */}
+      <div className="mx-auto max-w-[1200px] px-8 pt-2 pb-8">
+        <div className="flex items-center gap-3 border-b border-border pb-3">
+          <Search className="h-4 w-4 text-muted-foreground" />
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            placeholder="Search projects..."
+            className="w-full bg-transparent text-sm text-foreground placeholder:text-muted-foreground/50 focus:outline-none"
+          />
+        </div>
+      </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      {/* project grid */}
+      <main className="mx-auto max-w-[1200px] px-8 pb-20">
+        <div className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 lg:grid-cols-4">
           {filtered.map((pub) => (
             <article
               key={pub.id}
-              className="group flex flex-col overflow-hidden rounded-lg border border-border bg-card transition-all hover:border-primary/40 hover:shadow-lg hover:shadow-primary/5"
+              className="group flex flex-col items-center text-center"
             >
-              {pub.video ? (
-                <div className="aspect-video w-full overflow-hidden bg-muted">
+              {/* thumbnail */}
+              <div className="mb-4 aspect-[4/3] w-full overflow-hidden rounded-sm bg-muted">
+                {pub.video ? (
                   <video
                     src={pub.video}
                     autoPlay
@@ -106,59 +102,50 @@ const Research = () => {
                     preload="metadata"
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
-              ) : pub.image ? (
-                <div className="aspect-video w-full overflow-hidden bg-muted">
+                ) : pub.image ? (
                   <img
                     src={pub.image}
                     alt={pub.title}
                     loading="lazy"
                     className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
                   />
-                </div>
-              ) : null}
-              <div className="flex flex-1 flex-col p-4">
-                <span className="mb-2 inline-block self-start rounded-full bg-primary/10 px-2 py-0.5 font-mono-display text-[10px] tracking-wide text-primary">
-                  {pub.venue}
-                </span>
-                <h2 className="mb-2 font-mono-display text-sm font-semibold leading-snug text-foreground">
-                  {pub.title}
-                </h2>
-                <p className="mb-3 font-mono-display text-[11px] leading-relaxed text-muted-foreground">
-                  {pub.authors}
-                </p>
-
-                {pub.award && (
-                  <div className="mb-3 flex items-start gap-1.5">
-                    <Award className="mt-0.5 h-3 w-3 shrink-0 text-accent" />
-                    <span className="font-mono-display text-[10px] text-accent">
-                      {pub.award}
-                    </span>
-                  </div>
+                ) : (
+                  <div className="h-full w-full" />
                 )}
+              </div>
 
-                <div className="mt-auto flex flex-wrap gap-2 pt-2">
-                  {pub.links.map((link) => (
-                    <a
-                      key={link.label}
-                      href={link.url}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-flex items-center gap-1 rounded-full border border-border px-2.5 py-1 font-mono-display text-[10px] text-muted-foreground transition-colors hover:border-primary/40 hover:text-primary"
-                    >
-                      {link.label}
-                      <ExternalLink className="h-2.5 w-2.5" />
-                    </a>
-                  ))}
-                </div>
+              {/* title */}
+              <h2 className="mb-1 text-sm font-semibold leading-snug text-foreground">
+                {pub.title}
+              </h2>
+
+              {/* venue */}
+              <p className="text-xs text-muted-foreground">
+                {pub.venue} {pub.award ? "🏅" : ""}
+              </p>
+
+              {/* links row — shown on hover */}
+              <div className="mt-2 flex flex-wrap justify-center gap-2 opacity-0 transition-opacity duration-200 group-hover:opacity-100">
+                {pub.links.map((link) => (
+                  <a
+                    key={link.label}
+                    href={link.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-0.5 text-[11px] text-muted-foreground underline-offset-2 hover:text-foreground hover:underline"
+                  >
+                    {link.label}
+                    <ExternalLink className="h-2.5 w-2.5" />
+                  </a>
+                ))}
               </div>
             </article>
           ))}
         </div>
 
         {filtered.length === 0 && (
-          <p className="py-20 text-center font-mono-display text-sm text-muted-foreground">
-            no projects match your search.
+          <p className="py-20 text-center text-sm text-muted-foreground">
+            No projects match your search.
           </p>
         )}
       </main>
