@@ -1,3 +1,5 @@
+export type Tag = "human" | "ai systems" | "privacy" | "security" | "trust";
+
 export interface Publication {
   id: string;
   title: string;
@@ -9,6 +11,7 @@ export interface Publication {
   links: { label: string; url: string }[];
   award?: string;
   category: "conference" | "workshop" | "patent";
+  tags?: Tag[];
 }
 
 export const publications: Publication[] = [
@@ -21,6 +24,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/arkinator.jpg",
     links: [{ label: "paper", url: "https://www.haojianj.in/publications.html" }],
     category: "conference",
+    tags: ["privacy", "ai systems"],
   },
   {
     id: "cobra",
@@ -31,6 +35,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/cobra.jpg",
     links: [{ label: "paper", url: "https://arxiv.org/abs/2509.13588" }],
     category: "conference",
+    tags: ["ai systems", "human", "trust"],
   },
   {
     id: "understandparents",
@@ -41,6 +46,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/understandparent.jpg",
     links: [{ label: "paper", url: "https://www.haojianj.in/publications.html" }],
     category: "conference",
+    tags: ["human", "ai systems", "trust"],
   },
   {
     id: "telemetryplay",
@@ -51,6 +57,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/telemetryplay.jpg",
     links: [{ label: "paper", url: "https://dl.acm.org/doi/pdf/10.1145/3748607" }],
     category: "conference",
+    tags: ["ai systems", "privacy"],
   },
   {
     id: "privacysketch",
@@ -61,6 +68,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/privacysketch.jpg",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/sketchprivacy.pdf" }],
     category: "conference",
+    tags: ["privacy", "human"],
   },
   {
     id: "panopticon",
@@ -71,6 +79,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/panopticon_thumb.png",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/panopticon.pdf" }],
     category: "conference",
+    tags: ["privacy", "human"],
   },
   {
     id: "gamearena",
@@ -81,6 +90,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/gamearena.png",
     links: [{ label: "paper", url: "https://arxiv.org/abs/2412.06394" }],
     category: "conference",
+    tags: ["ai systems"],
   },
   {
     id: "gptwall",
@@ -91,6 +101,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/gptwall.png",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/GPTWall.pdf" }],
     category: "conference",
+    tags: ["privacy", "ai systems", "security"],
   },
   {
     id: "moderator",
@@ -105,6 +116,7 @@ export const publications: Publication[] = [
     ],
     award: "acm ccs distinguished paper award",
     category: "conference",
+    tags: ["ai systems", "security", "trust"],
   },
   {
     id: "lootbox",
@@ -115,6 +127,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/lootbox.jpg",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/lootboxtransparency.pdf" }],
     category: "conference",
+    tags: ["human", "trust"],
   },
   {
     id: "treequestion",
@@ -125,6 +138,7 @@ export const publications: Publication[] = [
     image: "https://www.haojianj.in/resource/image/treeQ.jpg",
     links: [{ label: "paper", url: "https://www.haojianj.in/resource/pdf/treequestion.pdf" }],
     category: "conference",
+    tags: ["ai systems", "human"],
   },
   {
     id: "zoomattention",
@@ -139,6 +153,7 @@ export const publications: Publication[] = [
       { label: "video", url: "https://www.youtube.com/watch?v=_Hfz9xJcZd0" },
     ],
     category: "conference",
+    tags: ["privacy", "human"],
   },
   {
     id: "contextuallabel",
@@ -153,6 +168,7 @@ export const publications: Publication[] = [
       { label: "video", url: "https://www.youtube.com/watch?v=1vLvKF2ZozM" },
     ],
     category: "conference",
+    tags: ["privacy", "human"],
   },
   {
     id: "peekaboo",
@@ -166,6 +182,7 @@ export const publications: Publication[] = [
       { label: "slides", url: "https://www.haojianj.in/resource/pdf/peekaboo-oakland-slides.pdf" },
     ],
     category: "conference",
+    tags: ["privacy", "security"],
   },
   {
     id: "privacyspeeddating",
@@ -179,6 +196,7 @@ export const publications: Publication[] = [
       { label: "video", url: "https://www.youtube.com/watch?v=bVrljhD2npk" },
     ],
     category: "conference",
+    tags: ["privacy", "human"],
   },
   {
     id: "leanprivacyreview",
@@ -192,6 +210,7 @@ export const publications: Publication[] = [
       { label: "video", url: "https://www.youtube.com/watch?v=x8301nQAw2M" },
     ],
     category: "conference",
+    tags: ["privacy", "human"],
   },
   {
     id: "softwaredefinedcooking",
@@ -206,6 +225,7 @@ export const publications: Publication[] = [
     ],
     award: "featured in acm getmobile research highlight & cacm research highlights",
     category: "conference",
+    tags: ["human"],
   },
   {
     id: "mobipurpose",
@@ -219,6 +239,7 @@ export const publications: Publication[] = [
       { label: "slides", url: "https://www.haojianj.in/resource/pdf/mobipurpose-slides-final.pdf" },
     ],
     category: "conference",
+    tags: ["privacy", "security"],
   },
   {
     id: "wish",
@@ -233,6 +254,7 @@ export const publications: Publication[] = [
       { label: "video", url: "https://www.youtube.com/watch?v=4FOLxXvjTvc" },
     ],
     category: "conference",
+    tags: ["human"],
   },
   {
     id: "rfwear",
@@ -248,6 +270,7 @@ export const publications: Publication[] = [
     ],
     award: "ubicomp & iswc 2018 best demo honorable mention",
     category: "conference",
+    tags: ["human"],
   },
   {
     id: "elasticplay",
@@ -263,6 +286,7 @@ export const publications: Publication[] = [
     ],
     award: "oral presentation - top 7%",
     category: "conference",
+    tags: ["human", "ai systems"],
   },
   {
     id: "corona",
@@ -276,6 +300,7 @@ export const publications: Publication[] = [
       { label: "slides", url: "https://www.haojianj.in/resource/pdf/corona_uist_presentation.pdf" },
     ],
     category: "conference",
+    tags: ["human"],
   },
   {
     id: "tracko",
@@ -290,6 +315,7 @@ export const publications: Publication[] = [
       { label: "video", url: "https://www.youtube.com/watch?v=GIZtf4uGZOM" },
     ],
     category: "conference",
+    tags: ["human"],
   },
   {
     id: "reviewcollage",
@@ -305,5 +331,6 @@ export const publications: Publication[] = [
     ],
     award: "best paper honorable mention award, top 5%",
     category: "conference",
+    tags: ["human"],
   },
 ];

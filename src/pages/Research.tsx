@@ -1,40 +1,62 @@
 import { useState, useMemo } from "react";
-import { publications } from "@/data/publications";
+import { publications, type Tag } from "@/data/publications";
 import { Search, ArrowLeft, ExternalLink, Award } from "lucide-react";
 import { Link } from "react-router-dom";
 
+const ALL_TAGS: Tag[] = ["human", "ai systems", "privacy", "security", "trust"];
+
 const Research = () => {
   const [query, setQuery] = useState("");
+  const [activeTags, setActiveTags] = useState<Set<Tag>>(new Set());
+
+  const toggleTag = (tag: Tag) => {
+    setActiveTags((prev) => {
+      const next = new Set(prev);
+      if (next.has(tag)) next.delete(tag);
+      else next.add(tag);
+      return next;
+    });
+  };
 
   const filtered = useMemo(() => {
-    if (!query.trim()) return publications;
-    const q = query.toLowerCase();
-    return publications.filter(
-      (p) =>
-        p.title.includes(q) ||
-        p.authors.includes(q) ||
-        p.venue.includes(q) ||
-        String(p.year).includes(q)
-    );
-  }, [query]);
+    let result = publications;
+    if (query.trim()) {
+      const q = query.toLowerCase();
+      result = result.filter(
+        (p) =>
+          p.title.includes(q) ||
+          p.authors.includes(q) ||
+          p.venue.includes(q) ||
+          String(p.year).includes(q)
+      );
+    }
+    if (activeTags.size > 0) {
+      result = result.filter(
+        (p) => p.tags && p.tags.some((t) => activeTags.has(t))
+      );
+    }
+    return result;
+  }, [query, activeTags]);
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* header */}
       <header className="sticky top-0 z-20 border-b border-border/40 bg-background/80 backdrop-blur-md">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-6 py-4">
-          <Link
-            to="/"
-            className="flex items-center gap-1.5 font-mono-display text-xs text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            home
-          </Link>
-          <h1 className="font-mono-display text-sm font-bold tracking-tight">
-            research
-          </h1>
-          <div className="ml-auto flex w-full max-w-xs items-center gap-2 rounded-full border border-border bg-muted/40 px-3 py-1.5">
-            <Search className="h-3.5 w-3.5 text-muted-foreground" />
+        <div className="mx-auto max-w-6xl px-6 py-4 space-y-3">
+          <div className="flex items-center gap-4">
+            <Link
+              to="/"
+              className="flex items-center gap-1.5 font-mono-display text-xs text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <ArrowLeft className="h-3.5 w-3.5" />
+              home
+            </Link>
+            <h1 className="font-mono-display text-sm font-bold tracking-tight">
+              research
+            </h1>
+          </div>
+          <div className="flex w-full items-center gap-2 rounded-full border border-border bg-muted/40 px-4 py-2">
+            <Search className="h-4 w-4 text-muted-foreground" />
             <input
               type="text"
               value={query}
@@ -42,6 +64,21 @@ const Research = () => {
               placeholder="search projects..."
               className="w-full bg-transparent font-mono-display text-xs text-foreground placeholder:text-muted-foreground/60 focus:outline-none"
             />
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {ALL_TAGS.map((tag) => (
+              <button
+                key={tag}
+                onClick={() => toggleTag(tag)}
+                className={`rounded-full border px-3 py-1 font-mono-display text-[11px] transition-colors ${
+                  activeTags.has(tag)
+                    ? "border-primary bg-primary/15 text-primary"
+                    : "border-border text-muted-foreground hover:border-primary/40 hover:text-foreground"
+                }`}
+              >
+                {tag}
+              </button>
+            ))}
           </div>
         </div>
       </header>
