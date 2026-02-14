@@ -49,6 +49,19 @@
     --gradient-cta-hover: linear-gradient(135deg, hsl(280, 85%, 65%), hsl(310, 85%, 60%));
     --glow-cta: 0 0 30px hsl(280 80% 60% / 0.4);
   }
+
+  /* Light theme for research page */
+  .light-research {
+    --background: 0 0% 100%;
+    --foreground: 210 20% 15%;
+    --muted-foreground: 210 10% 40%;
+    --card: 0 0% 100%;
+    --card-foreground: 210 20% 15%;
+    --border: 210 15% 90%;
+    --muted: 210 10% 94%;
+    --primary: 280 80% 65%;
+    --accent: 280 70% 55%;
+  }
 }
 
 @layer base {

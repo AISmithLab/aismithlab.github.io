@@ -39,7 +39,7 @@ const Research = () => {
   }, [query, activeTags]);
 
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="light-research min-h-screen bg-background text-foreground">
       {/* header */}
       <header className="sticky top-0 z-20 border-b border-border/40 bg-background/80 backdrop-blur-md">
         <div className="mx-auto max-w-6xl px-6 py-4 space-y-3">
