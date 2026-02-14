@@ -63,7 +63,7 @@ const Index = () => {
                 e.currentTarget.style.boxShadow = "var(--glow-cta)";
               }}
             >
-              join us ›
+              research ›
             </a>
           </div>
         </div>
