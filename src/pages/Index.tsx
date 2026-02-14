@@ -26,11 +26,9 @@ const Index = () => {
           <h1 className="font-mono-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
             ai smith lab
           </h1>
-
           <p className="mt-4 font-mono-display text-lg tracking-wide text-muted-foreground sm:text-xl">
             toolsmiths for the age of agentic ai.
           </p>
-
           <div className="mt-3 space-y-0.5">
             <p className="font-mono-display text-xs tracking-wide text-muted-foreground/70 sm:text-sm">
               human × ai systems ×
@@ -39,7 +37,6 @@ const Index = () => {
               privacy × security × trust.
             </p>
           </div>
-
           {/* Affiliations */}
           <div className="mt-4 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground/50 sm:text-sm">
             <span>
@@ -48,8 +45,8 @@ const Index = () => {
             <span>·</span>
             <span>hdsi</span>
           </div>
-
           {/* CTA Button */}
+          /*{" "}
           {/* <div className="mt-8">
             <a
               href="#"
@@ -69,7 +66,8 @@ const Index = () => {
             >
               join us ›
             </a>
-          </div> */}
+          </div> */}{" "}
+          */
         </div>
       </main>
     </div>
