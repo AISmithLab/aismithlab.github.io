@@ -27,22 +27,23 @@ const Index = () => {
             ai smith lab
           </h1>
 
-          <div className="mt-6 space-y-1">
-            <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
-              toolsmiths for the age of agentic ai.
-            </p>
-            <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
+          <p className="mt-4 font-mono-display text-lg tracking-wide text-muted-foreground sm:text-xl">
+            toolsmiths for the age of agentic ai.
+          </p>
+
+          <div className="mt-3 space-y-0.5">
+            <p className="font-mono-display text-xs tracking-wide text-muted-foreground/70 sm:text-sm">
               human × ai systems ×
             </p>
-            <p className="font-mono-display text-sm tracking-wide text-muted-foreground sm:text-base">
+            <p className="font-mono-display text-xs tracking-wide text-muted-foreground/70 sm:text-sm">
               privacy × security × trust.
             </p>
           </div>
 
           {/* Affiliations */}
-          <div className="mt-6 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground sm:text-sm">
+          <div className="mt-4 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground/50 sm:text-sm">
             <span>ucsd</span>
-            <span className="text-muted-foreground/50">·</span>
+            <span>·</span>
             <span>hdsi</span>
           </div>
 
