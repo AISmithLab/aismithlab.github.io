@@ -15,9 +15,8 @@ const Index = () => {
           muted
           playsInline
           className="absolute inset-0 h-full w-full object-cover"
-        >
-          {/* Video source will be added later */}
-        </video>
+          src="/videos/background.mp4"
+        />
         {/* Gradient fallback / overlay */}
         <div
           className="absolute inset-0"
