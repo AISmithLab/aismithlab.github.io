@@ -9,7 +9,7 @@ const People = () => {
     <div className="light-research min-h-screen bg-background text-foreground">
       {/* header */}
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
-        <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-between">
+        <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-end">
           <NavBar variant="light" />
         </div>
       </header>
