@@ -50,12 +50,23 @@ const Index = () => {
               active tools
             </h2>
             <ul className="mt-3 space-y-1.5">
-              {["farsight", "aegis", "co-audit", "prism", "echolab"].map((tool) => (
+              {[
+                { name: "AICodingGym", url: "https://aicodinggym.com/" },
+                // { name: "PrivacyDev Guides", url: "#" },
+              ].map((tool) => (
                 <li
-                  key={tool}
+                  key={tool.name}
                   className="font-mono-display text-base tracking-wide text-foreground/70 drop-shadow-sm"
                 >
-                  → {tool}
+                  →{" "}
+                  <a
+                    href={tool.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="underline underline-offset-4 hover:text-foreground transition-colors"
+                  >
+                    {tool.name}
+                  </a>
                 </li>
               ))}
             </ul>
