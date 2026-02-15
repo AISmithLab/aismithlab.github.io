@@ -100,14 +100,14 @@ const Research = () => {
                     muted
                     playsInline
                     preload="metadata"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
                   />
                 ) : pub.image ? (
                   <img
                     src={pub.image}
                     alt={pub.title}
                     loading="lazy"
-                    className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
+                    className="h-full w-full object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
                   />
                 ) : (
                   <div className="h-full w-full" />
