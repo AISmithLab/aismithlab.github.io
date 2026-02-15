@@ -1,4 +1,5 @@
 import { useRef } from "react";
+import { Link } from "react-router-dom";
 
 const Index = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -20,8 +21,17 @@ const Index = () => {
         <div className="absolute inset-0 bg-background/40" />
       </div>
 
+      {/* Navigation */}
+      <nav className="relative z-10 flex justify-end px-8 pt-6 sm:px-16 lg:px-24">
+        <div className="flex items-center gap-6 font-mono-display text-sm tracking-wide text-muted-foreground">
+          <Link to="/" className="transition-colors hover:text-foreground">home</Link>
+          <Link to="/people" className="transition-colors hover:text-foreground">people</Link>
+          <Link to="/research" className="transition-colors hover:text-foreground">projects</Link>
+        </div>
+      </nav>
+
       {/* Content */}
-      <main className="relative z-10 flex min-h-screen flex-col justify-center px-8 sm:px-16 lg:px-24">
+      <main className="relative z-10 flex min-h-[calc(100vh-4rem)] flex-col justify-center px-8 sm:px-16 lg:px-24">
         <div className="max-w-xl">
           <h1 className="font-mono-display text-5xl font-bold tracking-tight text-foreground sm:text-6xl">
             ai smith lab
@@ -37,21 +47,6 @@ const Index = () => {
               privacy × security × trust.
             </p>
           </div>
-          {/* Affiliations */}
-          <div className="mt-4 flex items-center gap-3 font-mono-display text-xs tracking-wide text-muted-foreground/50 sm:text-sm">
-            <span>
-              <a href="https://ucsd.edu/">ucsd</a>
-            </span>
-            <span>·</span>
-            <span>
-              <a href="/research">research</a>
-            </span>
-            <span>·</span>
-            <span>
-              <a href="/people">people</a>
-            </span>
-          </div>
-         
         </div>
       </main>
     </div>
