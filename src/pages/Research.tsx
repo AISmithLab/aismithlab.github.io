@@ -116,7 +116,7 @@ const Research = () => {
 
               {/* title */}
               <h2 className="mb-1 text-sm font-semibold leading-snug text-foreground">
-                {pub.title}
+                {pub.shorttitle || pub.title}
               </h2>
 
               {/* venue */}

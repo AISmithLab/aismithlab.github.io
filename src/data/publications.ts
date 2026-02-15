@@ -3,6 +3,7 @@ export type Tag = "human" | "ai systems" | "privacy" | "security" | "trust";
 export interface Publication {
   id: string;
   title: string;
+  shorttitle?: string;
   authors: string;
   venue: string;
   year: number;
