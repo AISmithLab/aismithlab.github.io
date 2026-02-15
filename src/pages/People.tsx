@@ -1,0 +1,100 @@
+import { people } from "@/data/people";
+import { ArrowLeft, ExternalLink } from "lucide-react";
+import { Link } from "react-router-dom";
+
+const currentMembers = people.filter((p) => p.category === "current");
+const alumni = people.filter((p) => p.category === "alumni");
+
+const People = () => {
+  return (
+    <div className="light-research min-h-screen bg-background text-foreground">
+      {/* header */}
+      <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
+        <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-between">
+          <Link
+            to="/"
+            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+          >
+            <ArrowLeft className="h-3.5 w-3.5" />
+            home
+          </Link>
+          <nav className="flex items-center gap-6">
+            <Link
+              to="/research"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              research
+            </Link>
+          </nav>
+        </div>
+      </header>
+
+      <main className="mx-auto max-w-[1200px] px-8 pb-20">
+        {/* current members */}
+        <section className="pt-8 pb-16">
+          <h2 className="mb-10 text-sm font-medium tracking-widest text-muted-foreground">
+            current members
+          </h2>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {currentMembers.map((person) => (
+              <PersonCard key={person.name} person={person} />
+            ))}
+          </div>
+        </section>
+
+        {/* alumni */}
+        <section className="pb-16">
+          <h2 className="mb-10 text-sm font-medium tracking-widest text-muted-foreground">
+            alumni
+          </h2>
+          <div className="grid grid-cols-2 gap-x-8 gap-y-10 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+            {alumni.map((person) => (
+              <PersonCard key={person.name} person={person} />
+            ))}
+          </div>
+        </section>
+      </main>
+    </div>
+  );
+};
+
+function PersonCard({ person }: { person: (typeof people)[number] }) {
+  return (
+    <a
+      href={person.url}
+      target="_blank"
+      rel="noopener noreferrer"
+      className="group flex flex-col items-center text-center"
+    >
+      {/* circular avatar */}
+      <div className="mb-3 h-28 w-28 overflow-hidden rounded-full bg-muted">
+        <img
+          src={person.image}
+          alt={person.name}
+          loading="lazy"
+          className="h-full w-full object-cover grayscale transition-[filter] duration-300 group-hover:grayscale-0"
+        />
+      </div>
+
+      {/* name */}
+      <h3 className="text-sm font-semibold text-foreground group-hover:underline underline-offset-2">
+        {person.name}
+      </h3>
+
+      {/* role */}
+      <p className="mt-0.5 text-xs text-muted-foreground">{person.role}</p>
+
+      {/* period */}
+      <p className="text-xs text-muted-foreground/60">{person.period}</p>
+
+      {/* destination for alumni */}
+      {person.destination && (
+        <p className="mt-0.5 text-xs text-muted-foreground/80">
+          → {person.destination}
+        </p>
+      )}
+    </a>
+  );
+}
+
+export default People;
