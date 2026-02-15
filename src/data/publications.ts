@@ -332,7 +332,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, christian holz, kasper hornbæk",
     venue: "uist'15",
     year: 2015,
-    image: "https://www.haojianj.in/resource/image/tracko_thumb.png",
+    video: "https://www.haojianj.in/resource/videos/tracko_pouring.mp4",
     links: [
       { label: "paper", url: "https://www.haojianj.in/resource/pdf/tracko-uist15.pdf" },
       { label: "slides", url: "https://www.haojianj.in/resource/pdf/tracko-presentation.pdf" },
@@ -348,7 +348,7 @@ export const publications: Publication[] = [
     authors: "haojian jin, tetsuya sakai, koji yatani",
     venue: "mobilehci'14",
     year: 2014,
-    image: "https://www.haojianj.in/resource/image/reviewcollage.png",
+    video: "https://www.haojianj.in/resource/videos/reviewcollage.mp4",
     links: [
       { label: "paper", url: "http://iis-lab.org/paper/MobileHCI2014_ReviewCollage.pdf" },
       { label: "slides", url: "https://www.haojianj.in/resource/pdf/reviewcollage_presentation.pdf" },
