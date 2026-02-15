@@ -67,7 +67,7 @@ function PersonCard({ person }: { person: (typeof people)[number] }) {
       className="group flex flex-col items-center text-center"
     >
       {/* circular avatar */}
-      <div className="mb-3 h-28 w-28 overflow-hidden rounded-full bg-muted">
+      <div className="mb-4 h-44 w-44 overflow-hidden rounded-full bg-muted">
         <img
           src={person.image}
           alt={person.name}
