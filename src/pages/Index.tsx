@@ -46,7 +46,7 @@ const Index = () => {
 
           {/* Active Tools */}
           <div className="mt-10">
-            <h2 className="font-mono-display text-sm font-medium uppercase tracking-widest text-foreground/50 drop-shadow-sm">
+            <h2 className="font-mono-display text-sm font-medium tracking-widest text-foreground/50 drop-shadow-sm">
               active tools
             </h2>
             <ul className="mt-3 space-y-1.5">
