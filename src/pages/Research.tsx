@@ -1,7 +1,7 @@
 import { useState, useMemo } from "react";
 import { publications, type Tag } from "@/data/publications";
-import { Search, ArrowLeft, ExternalLink, Award } from "lucide-react";
-import { Link } from "react-router-dom";
+import { Search, ExternalLink } from "lucide-react";
+import NavBar from "@/components/NavBar";
 
 const ALL_TAGS: Tag[] = ["human", "ai systems", "privacy", "security", "trust"];
 
@@ -43,13 +43,7 @@ const Research = () => {
       {/* header */}
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
         <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            Home
-          </Link>
+          <NavBar variant="light" />
           <nav className="flex items-center gap-6">
             {ALL_TAGS.map((tag) => (
               <button

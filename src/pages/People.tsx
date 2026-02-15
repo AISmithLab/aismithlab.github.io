@@ -1,6 +1,5 @@
 import { people } from "@/data/people";
-import { ArrowLeft, ExternalLink } from "lucide-react";
-import { Link } from "react-router-dom";
+import NavBar from "@/components/NavBar";
 
 const currentMembers = people.filter((p) => p.category === "current");
 const alumni = people.filter((p) => p.category === "alumni");
@@ -11,21 +10,7 @@ const People = () => {
       {/* header */}
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
         <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-between">
-          <Link
-            to="/"
-            className="flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-          >
-            <ArrowLeft className="h-3.5 w-3.5" />
-            home
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link
-              to="/research"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              research
-            </Link>
-          </nav>
+          <NavBar variant="light" />
         </div>
       </header>
 
