@@ -43,7 +43,9 @@ const Index = () => {
               <a href="https://ucsd.edu/">ucsd</a>
             </span>
             <span>·</span>
-            <span>hdsi</span>
+            <span>
+              <a href="/research">hdsi</a>
+            </span>
           </div>
           {/* CTA Button */}
           <div className="mt-8">
