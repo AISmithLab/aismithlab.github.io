@@ -120,7 +120,7 @@ const Research = () => {
               </h2>
 
               {/* venue */}
-              <p className="text-xs text-muted-foreground">
+              <p className="text-xs text-muted-foreground uppercase">
                 {pub.venue} {pub.award ? "🏅" : ""}
               </p>
 
