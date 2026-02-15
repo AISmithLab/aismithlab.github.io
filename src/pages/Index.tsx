@@ -43,6 +43,23 @@ const Index = () => {
               privacy × security × trust.
             </p>
           </div>
+
+          {/* Active Tools */}
+          <div className="mt-10">
+            <h2 className="font-mono-display text-sm font-medium uppercase tracking-widest text-foreground/50 drop-shadow-sm">
+              active tools
+            </h2>
+            <ul className="mt-3 space-y-1.5">
+              {["farsight", "aegis", "co-audit", "prism", "echolab"].map((tool) => (
+                <li
+                  key={tool}
+                  className="font-mono-display text-base tracking-wide text-foreground/70 drop-shadow-sm"
+                >
+                  → {tool}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </main>
     </div>
