@@ -1,22 +1,10 @@
 import { useState, useMemo } from "react";
-import { publications, type Tag } from "@/data/publications";
+import { publications } from "@/data/publications";
 import { Search, ExternalLink } from "lucide-react";
 import NavBar from "@/components/NavBar";
 
-const ALL_TAGS: Tag[] = ["human", "ai systems", "privacy", "security", "trust"];
-
 const Research = () => {
   const [query, setQuery] = useState("");
-  const [activeTags, setActiveTags] = useState<Set<Tag>>(new Set());
-
-  const toggleTag = (tag: Tag) => {
-    setActiveTags((prev) => {
-      const next = new Set(prev);
-      if (next.has(tag)) next.delete(tag);
-      else next.add(tag);
-      return next;
-    });
-  };
 
   const filtered = useMemo(() => {
     let result = publications;
@@ -30,35 +18,15 @@ const Research = () => {
           String(p.year).includes(q)
       );
     }
-    if (activeTags.size > 0) {
-      result = result.filter(
-        (p) => p.tags && p.tags.some((t) => activeTags.has(t))
-      );
-    }
     return result;
-  }, [query, activeTags]);
+  }, [query]);
 
   return (
     <div className="light-research min-h-screen bg-background text-foreground">
       {/* header */}
       <header className="sticky top-0 z-20 bg-background/95 backdrop-blur-sm">
-        <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-between">
+        <div className="mx-auto max-w-[1200px] px-8 py-5 flex items-center justify-end">
           <NavBar variant="light" />
-          <nav className="flex items-center gap-6">
-            {ALL_TAGS.map((tag) => (
-              <button
-                key={tag}
-                onClick={() => toggleTag(tag)}
-                className={`text-sm capitalize transition-colors ${
-                  activeTags.has(tag)
-                    ? "text-foreground font-medium underline underline-offset-4 decoration-2"
-                    : "text-muted-foreground hover:text-foreground"
-                }`}
-              >
-                {tag}
-              </button>
-            ))}
-          </nav>
         </div>
       </header>
 
