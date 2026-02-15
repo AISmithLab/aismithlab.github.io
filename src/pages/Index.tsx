@@ -46,27 +46,12 @@ const Index = () => {
             <span>
               <a href="/research">research</a>
             </span>
+            <span>·</span>
+            <span>
+              <a href="/people">people</a>
+            </span>
           </div>
-          {/* CTA Button */}
-          <div className="mt-8">
-            <a
-              href="/research"
-              className="inline-flex items-center gap-2 rounded-full px-8 py-3 text-sm font-medium text-primary-foreground transition-all hover:scale-105"
-              style={{
-                background: "var(--gradient-cta)",
-                boxShadow: "var(--glow-cta)",
-              }}
-              onMouseEnter={(e) => {
-                e.currentTarget.style.background = "var(--gradient-cta-hover)";
-                e.currentTarget.style.boxShadow = "0 0 40px hsl(280 80% 60% / 0.6)";
-              }}
-              onMouseLeave={(e) => {
-                e.currentTarget.style.background = "var(--gradient-cta)";
-                e.currentTarget.style.boxShadow = "var(--glow-cta)";
-              }}
-            >
-              research ›
-            </a>
+         
           </div>
         </div>
       </main>
