@@ -44,7 +44,7 @@ const Index = () => {
             </span>
             <span>·</span>
             <span>
-              <a href="/research">hdsi</a>
+              <a href="/research">research</a>
             </span>
           </div>
           {/* CTA Button */}
