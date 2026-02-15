@@ -1,5 +1,5 @@
 import { useRef } from "react";
-import { Link } from "react-router-dom";
+import NavBar from "@/components/NavBar";
 
 const Index = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -22,13 +22,9 @@ const Index = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex justify-end px-8 pt-6 sm:px-16 lg:px-24">
-        <div className="flex items-center gap-8 font-mono-display text-base tracking-wide text-foreground/80">
-          <Link to="/" className="transition-colors hover:text-foreground">home</Link>
-          <Link to="/people" className="transition-colors hover:text-foreground">people</Link>
-          <Link to="/research" className="transition-colors hover:text-foreground">projects</Link>
-        </div>
-      </nav>
+      <div className="relative z-10 flex justify-end px-8 pt-6 sm:px-16 lg:px-24">
+        <NavBar variant="dark" />
+      </div>
 
       {/* Content */}
       <main className="relative z-10 flex min-h-[calc(100vh-4rem)] flex-col justify-center px-8 sm:px-16 lg:px-24">
