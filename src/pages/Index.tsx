@@ -77,7 +77,7 @@ const Index = () => {
             <h2 className="font-mono-display text-sm font-medium tracking-widest text-foreground/30 drop-shadow-sm">
               previous tools
             </h2>
-            <ul className="mt-2 columns-2 gap-x-8 space-y-1">
+            <ul className="mt-2 columns-2 gap-x-4 space-y-1">
               {[
                 "farsight",
                 "aegis",
