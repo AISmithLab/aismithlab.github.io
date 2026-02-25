@@ -71,6 +71,34 @@ const Index = () => {
               ))}
             </ul>
           </div>
+
+          {/* Previous Tools */}
+          <div className="mt-8">
+            <h2 className="font-mono-display text-sm font-medium tracking-widest text-foreground/30 drop-shadow-sm">
+              previous tools
+            </h2>
+            <ul className="mt-2 columns-2 gap-x-8 space-y-1">
+              {[
+                "farsight",
+                "aegis",
+                "co-audit",
+                "prism",
+                "echolab",
+                "sentinel",
+                "lattice",
+                "veil",
+                "neutrino",
+                "axiom",
+              ].map((tool) => (
+                <li
+                  key={tool}
+                  className="font-mono-display text-sm tracking-wide text-foreground/30"
+                >
+                  {tool}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </main>
     </div>
