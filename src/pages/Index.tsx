@@ -73,7 +73,7 @@ const Index = () => {
           </div>
 
           {/* Previous Tools */}
-          <div className="mt-8">
+          <div className="mt-14">
             <h2 className="font-mono-display text-sm font-medium tracking-widest text-foreground/30 drop-shadow-sm">
               previous tools
             </h2>
