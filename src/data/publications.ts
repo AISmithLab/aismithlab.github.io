@@ -16,6 +16,18 @@ export interface Publication {
 }
 
 export const publications: Publication[] = [
+    {
+    id: "lmgame-bench",
+    shorttitle: "LMGame Bench",
+    title: "lmgame-bench: a benchmark for evaluating large language models in game environments",
+    authors: "Lanxiang Hu, Mingjia Huo, Yuxuan Zhang, Haoyang Yu, Eric P Xing, Ion Stoica, Tajana Rosing, Haojian Jin, Hao Zhang",
+    venue: "ICLR'26",
+    year: 2026,
+    image: "https://www.haojianj.in/resource/image/lmgamebench.jpg",
+    links: [{ label: "paper", url: "https://arxiv.org/pdf/2505.15146" }],
+    category: "conference",
+    tags: ["privacy", "ai systems"],
+  },
   {
     id: "privacyakinator",
     shorttitle: "PrivacyAkinator",

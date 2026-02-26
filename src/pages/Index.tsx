@@ -52,7 +52,7 @@ const Index = () => {
             <ul className="mt-3 space-y-1.5">
               {[
                 { name: "AICodingGym", url: "https://aicodinggym.com/" },
-                // { name: "PrivacyDev Guides", url: "#" },
+                { name: "PersonalDataHub", url: "https://github.com/AISmithLab/PersonalDataHub" },
               ].map((tool) => (
                 <li
                   key={tool.name}
@@ -75,26 +75,34 @@ const Index = () => {
           {/* Previous Tools */}
           <div className="mt-24">
             <h2 className="font-mono-display text-sm font-medium tracking-widest text-foreground/30 drop-shadow-sm">
-              previous tools
+              selected previous tools
             </h2>
             <ul className="mt-2 columns-2 gap-x-4 space-y-1">
               {[
-                "farsight",
-                "aegis",
-                "co-audit",
-                "prism",
-                "echolab",
-                "sentinel",
-                "lattice",
-                "veil",
-                "neutrino",
-                "axiom",
+                { name: "privacy arkinator", url: "#" },
+                { name: "cobra", url: "https://github.com/AISmithLab/CoBRA" },
+                { name: "humanstudy bench", url: "https://www.hs-bench.clawder.ai/" },
+                { name: "game arena", url: "https://lmgame.org/" },
+                { name: "decentralized arena", url: "https://de-arena.maitrix.org/" },
+                { name: "software defined cooking", url: "https://cacm.acm.org/research/software-defined-cooking-using-a-microwave-oven/" },
+                { name: "moderator", url: "https://www.haojianj.in/resource/pdf/contentmoderator.pdf" },
               ].map((tool) => (
                 <li
-                  key={tool}
+                  key={tool.name}
                   className="font-mono-display text-sm tracking-wide text-foreground/30"
                 >
-                  {tool}
+                  {tool.url ? (
+                    <a
+                      href={tool.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="underline underline-offset-4 hover:text-foreground/50 transition-colors"
+                    >
+                      {tool.name}
+                    </a>
+                  ) : (
+                    tool.name
+                  )}
                 </li>
               ))}
             </ul>
