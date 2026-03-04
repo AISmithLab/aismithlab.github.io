@@ -24,7 +24,7 @@ export const publications: Publication[] = [
     venue: "pets'26",
     year: 2026,
     image: "https://www.haojianj.in/resource/image/arkinator.jpg",
-    links: [{ label: "paper", url: "https://www.haojianj.in/publications.html" }],
+    links: [{ label: "paper", url: "#" }],
     category: "conference",
     tags: ["privacy", "ai systems"],
     },
