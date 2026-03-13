@@ -53,6 +53,7 @@ const Index = () => {
               {[
                 { name: "AICodingGym", url: "https://aicodinggym.com/" },
                 { name: "PersonalDataHub", url: "https://github.com/AISmithLab/PersonalDataHub" },
+                { name: "PrivacyJury", url: "http://jury.privacydev.org/" },
               ].map((tool) => (
                 <li
                   key={tool.name}
@@ -80,12 +81,12 @@ const Index = () => {
             <ul className="mt-2 columns-2 gap-x-4 space-y-1">
               {[
                 { name: "privacy arkinator", url: "#" },
-                { name: "cobra", url: "https://github.com/AISmithLab/CoBRA" },
+                { name: "cobra 🏆", url: "https://github.com/AISmithLab/CoBRA" },
                 { name: "humanstudy bench", url: "https://www.hs-bench.clawder.ai/" },
                 { name: "game arena", url: "https://lmgame.org/" },
                 { name: "decentralized arena", url: "https://de-arena.maitrix.org/" },
                 { name: "software defined cooking", url: "https://cacm.acm.org/research/software-defined-cooking-using-a-microwave-oven/" },
-                { name: "moderator", url: "https://www.haojianj.in/resource/pdf/contentmoderator.pdf" },
+                { name: "moderator 🏆", url: "https://www.haojianj.in/resource/pdf/contentmoderator.pdf" },
               ].map((tool) => (
                 <li
                   key={tool.name}
