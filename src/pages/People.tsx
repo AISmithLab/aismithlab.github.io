@@ -1,5 +1,6 @@
 import { people } from "@/data/people";
 import NavBar from "@/components/NavBar";
+import GroupPhotoGallery from "@/components/GroupPhotoGallery";
 
 const currentMembers = people.filter((p) => p.category === "current");
 const alumni = people.filter((p) => p.category === "alumni");
@@ -50,6 +51,9 @@ const People = () => {
       </header>
 
       <main className="mx-auto max-w-[1200px] px-8 pb-20">
+        {/* group photo gallery */}
+        <GroupPhotoGallery />
+
         {/* current members */}
         <section className="pt-8 pb-16">
           <h2 className="mb-10 text-sm font-medium tracking-widest text-muted-foreground">
