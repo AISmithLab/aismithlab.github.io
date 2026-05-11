@@ -62,12 +62,29 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+The site is deployed automatically to GitHub Pages and served at **https://aismithlab.com**.
 
-## Can I connect a custom domain to my Lovable project?
+**Auto-deploy on push.** Every push to `main` triggers `.github/workflows/deploy.yml`, which runs `npm install && npm run build` and publishes the `dist/` output to the `gh-pages` branch via [`peaceiris/actions-gh-pages`](https://github.com/peaceiris/actions-gh-pages). GitHub Pages then serves that branch.
 
-Yes, you can!
+```sh
+git push origin main   # ~1–2 min later, changes are live
+```
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+You can watch the deploy run under the repo's **Actions** tab.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+**Manual one-off deploy** (only if Actions is broken):
+
+```sh
+npm run build
+npx gh-pages -d dist
+```
+
+**Custom domain.** The site is served from `aismithlab.com`, configured by:
+
+1. `public/CNAME` — written into the build so GitHub Pages knows the custom domain.
+2. DNS — an `A`/`ALIAS` record for `aismithlab.com` pointing at GitHub Pages' IPs (`185.199.108.153`, `185.199.109.153`, `185.199.110.153`, `185.199.111.153`).
+3. Repo **Settings → Pages** — source set to `Deploy from a branch` → `gh-pages` / `/ (root)`, with **Enforce HTTPS** enabled.
+
+To use a different domain, edit `public/CNAME`, update the DNS records, and update the **Custom domain** field under Settings → Pages.
+
+**Asset paths.** Reference public assets with a leading slash (e.g. `/photos/foo.png`, not `photos/foo.png`) so they resolve from the site root rather than the current route — relative paths break on sub-routes like `/people`.

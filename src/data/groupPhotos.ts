@@ -6,15 +6,11 @@ export interface GroupPhoto {
 // replace with real group photos in /public/photos/group/
 export const groupPhotos: GroupPhoto[] = [
   {
-    src: "/photos/group/lab-2025.jpg",
-    caption: "lab outing, fall 2025",
+    src: "/photos/group/chi2026.jpg",
+    caption: "CHI 2026",
   },
   {
-    src: "/photos/group/lab-2024.jpg",
-    caption: "end-of-year celebration, 2024",
-  },
-  {
-    src: "/photos/group/lab-2023.jpg",
-    caption: "first lab group photo, 2023",
-  },
+    src: "/photos/group/barcelona.jpg",
+    caption: "Barcelona",
+  }
 ];
