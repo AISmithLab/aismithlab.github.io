@@ -50,6 +50,14 @@ export const people: Person[] = [
     category: "current",
   },
   {
+    name: "wenchang chai",
+    image: "/photos/portraits/wenchangchai.jpg",
+    url: "https://wenchang-chai.pages.dev/",
+    role: "phd student",
+    period: "2026 –",
+    category: "current",
+  },
+  {
     name: "muchan li",
     image: "https://www.haojianj.in/lab/muchanli.jpeg",
     url: "https://www.linkedin.com/in/muchan-li-989703227/",
