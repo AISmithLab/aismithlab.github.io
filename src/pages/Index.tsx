@@ -52,6 +52,7 @@ const Index = () => {
             <ul className="mt-3 space-y-1.5">
               {[
                 { name: "AICodingGym", url: "https://aicodinggym.com/" },
+                { name: "HyperStim?", url: "https://aismithlab.com/hyperstim/" },
                 { name: "CoBRA 🏆", url: "https://cobra.clawder.ai" },
                 { name: "PersonalDataHub", url: "https://github.com/AISmithLab/PersonalDataHub" },
                 { name: "PrivacyJury", url: "http://jury.privacydev.org/" },
@@ -81,7 +82,7 @@ const Index = () => {
             </h2>
             <ul className="mt-2 columns-2 gap-x-4 space-y-1">
               {[
-                { name: "privacy arkinator", url: "#" },
+                { name: "privacy akinator", url: "#" },
                 { name: "humanstudy bench", url: "https://www.hs-bench.clawder.ai/" },
                 { name: "game arena", url: "https://lmgame.org/" },
                 { name: "decentralized arena", url: "https://de-arena.maitrix.org/" },
